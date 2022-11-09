@@ -1,0 +1,7 @@
+{
+  "name": "Tailwind",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
