@@ -1,3 +1,7 @@
+body{
+  font-family: 'Poppins'!important;
+}
+
 #container {
   text-align: center;
 
@@ -14,7 +18,7 @@
 }
 
 #container p {
-  font-size: 16px;
+  font-size: 36px;
   line-height: 22px;
 
   color: #8c8c8c;
@@ -22,10 +26,5 @@
   margin: 0;
 }
 
-#container a {
-  text-decoration: none;
-}
 
-#beknap{
-background-color: yellow;
-}
+
