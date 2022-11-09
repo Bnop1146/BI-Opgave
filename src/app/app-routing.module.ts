@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'energi',
+    loadChildren: () => import('./energi/energi.module').then( m => m.EnergiPageModule)
+  },
 ];
 
 @NgModule({
