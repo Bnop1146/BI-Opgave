@@ -15,6 +15,14 @@ const routes: Routes = [
     path: 'energi',
     loadChildren: () => import('./energi/energi.module').then( m => m.EnergiPageModule)
   },
+  {
+    path: 'vand',
+    loadChildren: () => import('./vand/vand.module').then( m => m.VandPageModule)
+  },
+  {
+    path: 'land',
+    loadChildren: () => import('./land/land.module').then( m => m.LandPageModule)
+  },
 ];
 
 @NgModule({
