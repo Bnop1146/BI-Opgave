@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {NavController} from '@ionic/angular';
 
 
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -12,12 +13,20 @@ export class HomePage {
   constructor(public navCtrl: NavController) {}
 
   goToHome() {
-    this.navCtrl.navigateForward('home');
-  }
-  goToEnergi() {
-    this.navCtrl.navigateForward('energi');
+    this.navCtrl.navigateForward('Home');
   }
 
+  goToEnergi() {
+    this.navCtrl.navigateForward('Energi');
+  }
+
+  goToVand() {
+    this.navCtrl.navigateForward('Vand');
+  }
+  
+  goToLand() {
+    this.navCtrl.navigateForward('Land');
+  }
   
 
 }
