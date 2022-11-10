@@ -36,37 +36,41 @@
 }
 
 .beknap{
-  height: 55px;
-  width: 250px;
+  height: 50px;
+  width: 200px;
   --border-radius: 200px;
   text-transform: none;
 
 }
 
 .lvpknap{
-  height: 55px;
-  width: 250px;
+  height: 50px;
+  width: 200px;
   --border-radius: 200px;
   text-transform: none;
 }
 
 .vosknap{
-  height: 55px;
-  width: 250px;
+  height: 50px;
+  width: 200px;
   --border-radius: 200px;
   text-transform: none;
 }
 
 .beknaptekst{
   margin: 10px!important;
+  font-size: 12px;
+  color: white;
 }
 
 .lvpknaptekst{
   margin: 10px!important;
+  font-size: 12px;
 }
 
 .vosknaptekst{
   margin: 10px!important;
+  font-size: 12px;
 }
 
 
@@ -97,7 +101,27 @@
   font-size: 15px;
 }
 
+.hero2{
+  display: none;
+}
 
+.hero1billede{
+  height: 330px;
+  width: 330px;
+  margin-left: 20px;
+}
+
+.besek{
+  text-align: -webkit-center;
+}
+
+.lvpsek{
+  text-align: -webkit-center;
+}
+
+.vossek{
+  text-align: -webkit-center;
+}
 
 
 
@@ -141,11 +165,27 @@
     width: 350px;
   }
   .heroover{
-    width: 50%;
-    font-size: 36px;
+    width: 80%;
+    font-size: 40px;
+    line-height: 1.2;
   }
   .herotekst{
-    width: 40%;
+    width: 55%;
+  }
+  
+  .hero2{
+    display: none;
+  }
+
+  .hero1billede{
+    height: 450px;
+    width: 450px;
+    margin-left: 135px;
+  }
+
+  .consek{
+    margin-top: 100px;
+
   }
 
 }
@@ -178,27 +218,44 @@
     width: 42%;
   }
   .bebillede{
-    height: 500px;
-    width: 500px;
+    height: 450px;
+    width: 450px;
   }
   .lvpbillede{
-    height: 500px;
-    width: 500px;
+    height: 450px;
+    width: 450px;
   }
   .vosbillede{
-    height: 500px;
-    width: 500px;
+    height: 450px;
+    width: 450px;
   }
   .heroover{
     width: 75%;
     font-size: 48px;
   }
   .herotekst{
-    width: 40%;
+    width: 50%;
   }
   .consek{
-    margin-top: 100px;
-    
+    margin-top: 200px;
+
   }
+  .hero3{
+    display: none;
+  }
+
+  .hero2{
+    display: block;
+  }
+
+
+  .hero2billede{
+    height: 650px;
+    width: 650px;
+    margin-left: -220px;
+    margin-top: -160px;
+  }
+
+
 
 }
