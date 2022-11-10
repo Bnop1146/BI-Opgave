@@ -11,6 +11,30 @@
   padding: 5px;
 }
 
+.beline{
+    height: 3px;
+    background: #FCC30B;
+    width: 90%;
+    margin-bottom: 30px;
+    margin-top: -5px;
+}
+
+.lvpline{
+  height: 3px;
+  background: #56C02B;
+  width: 63%;
+  margin-bottom: 30px;
+  margin-top: -5px;
+}
+
+.vosline{
+  height: 3px;
+  background: #26BDE2;
+  width: 78%;
+  margin-bottom: 30px;
+  margin-top: -5px;
+}
+
 
 @media screen and (min-width: 768px) {
   .lvpsektion{
@@ -26,8 +50,49 @@
 
   .besektion{
     padding: 40px;
-    margin-top: 0;
+    margin-top: -30px;
 
   }
+  .beline{
+    width: 45%;
+  }
+  .lvpline{
+    width: 31%;
+  }
+  .vosline{
+    width: 38%;
+  }
+
+}
+
+
+@media screen and (min-width: 1024px){
+  .lvpsektion{
+    padding: 0;
+    margin-top: 120px;
+   
+  }
+  
+  .vossektion{
+    padding: 0;
+    margin-top: 120px;
+  }
+
+  .besektion{
+    margin-top: 80px;
+    padding: 0;
+  }
+
+  .beline{
+    width: 49%;
+  }
+  .lvpline{
+    width: 34%;
+  }
+  .vosline{
+    width: 42%;
+  }
+
+
 
 }
