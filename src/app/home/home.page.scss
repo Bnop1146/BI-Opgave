@@ -93,6 +93,14 @@
   line-height: 2;
 }
 
+.sektekst{
+  font-size: 15px;
+}
+
+
+
+
+
 @media screen and (min-width: 768px) {
   .lvpsektion{
     padding: 40px;
@@ -131,6 +139,13 @@
   .vosbillede{
     height: 350px;
     width: 350px;
+  }
+  .heroover{
+    width: 50%;
+    font-size: 36px;
+  }
+  .herotekst{
+    width: 40%;
   }
 
 }
@@ -174,6 +189,16 @@
     height: 500px;
     width: 500px;
   }
-
+  .heroover{
+    width: 75%;
+    font-size: 48px;
+  }
+  .herotekst{
+    width: 40%;
+  }
+  .consek{
+    margin-top: 100px;
+    
+  }
 
 }
