@@ -9,10 +9,19 @@ import {NavController} from '@ionic/angular';
 export class AppComponent {
   constructor(public navCtrl: NavController) {}
 
-  goToHome() {
-    this.navCtrl.navigateForward('home');
+ goToHome() {
+    this.navCtrl.navigateForward('Home');
   }
+
   goToEnergi() {
-    this.navCtrl.navigateForward('energi');
+    this.navCtrl.navigateForward('Energi');
+  }
+
+  goToVand() {
+    this.navCtrl.navigateForward('Vand');
+  }
+  
+  goToLand() {
+    this.navCtrl.navigateForward('Land');
   }
 }
