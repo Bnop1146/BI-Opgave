@@ -52,7 +52,7 @@
 
 .vosknap{
   height: 55px;
-  width: 230px;
+  width: 250px;
   --border-radius: 200px;
   text-transform: none;
 }
@@ -64,6 +64,11 @@
 .lvpknaptekst{
   margin: 10px!important;
 }
+
+.vosknaptekst{
+  margin: 10px!important;
+}
+
 
 .bebillede{
   height: 300px;
@@ -78,6 +83,15 @@
   width: 300px;
 }
 
+.heroover{
+    font-size: 31px;
+    line-height: 1.2;
+}
+
+.herotekst{
+  font-size: 15px;
+  line-height: 2;
+}
 
 @media screen and (min-width: 768px) {
   .lvpsektion{
