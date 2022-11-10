@@ -93,6 +93,14 @@
   line-height: 2;
 }
 
+.hero1{
+  display: block;
+}
+
+.hero2{
+  display: none;
+}
+
 @media screen and (min-width: 768px) {
   .lvpsektion{
     padding: 40px;
