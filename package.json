@@ -45,7 +45,7 @@
     "@tailwindcss/aspect-ratio": "latest",
     "@tailwindcss/forms": "latest",
     "@tailwindcss/line-clamp": "latest",
-    "@tailwindcss/typography": "latest",
+    "@tailwindcss/typography": "^0.5.8",
     "@types/jasmine": "~3.6.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
