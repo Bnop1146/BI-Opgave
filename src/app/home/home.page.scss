@@ -3,6 +3,20 @@
   padding: 5px;
 }
 
+.footersektion{
+  margin: 20px;
+}
+
+.footerline{
+    border-top: 1px solid;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.footertekst{
+  font-size: 13px;
+}
+
 .vossektion{
   margin-top: 50px;
   padding: 5px;
@@ -230,7 +244,7 @@
     width: 450px;
   }
   .heroover{
-    width: 75%;
+    width: 55%;
     font-size: 48px;
   }
   .herotekst{
@@ -255,7 +269,4 @@
     margin-left: -220px;
     margin-top: -160px;
   }
-
-
-
 }
