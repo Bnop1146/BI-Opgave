@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+:root {
+    --ion-font-family: "Poppins", "sans-serif";
+
+}
+body{
+    font-family: var(--ion-font-family);
+
+}
+
+.scroll{ 
+    height: 100vh;
+    overflow-y: scroll;
+  }
