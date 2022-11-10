@@ -1,0 +1,17 @@
+.container {
+    height: 70vh;
+}
+
+/* iOS places the subtitle above the title */
+ion-card-header.ios {
+    justify-items: center;
+    display: flex;
+    flex-flow: column-reverse;
+  }
+
+
+  .Hero_icon{
+    width: 25%;
+    margin: auto;
+   
+  }
