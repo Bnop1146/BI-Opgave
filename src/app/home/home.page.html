@@ -120,16 +120,71 @@
 =======
 >>>>>>> 7003262af3c5a8ddc941e59cfb2afe3381ed4ac7
 
-<ion-content>
+<ion-content class="ion-padding">
  
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu Content</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">This is the menu content.</ion-content>
+  </ion-menu>
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+  
+  </div>
+
+  <section class="dsek">
+    <div class="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
+      <div class="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
+        
+        <div class="overskrifter">
+        <h1 class="text-4xl font-bold leading-none sm:text-6xl">Vi hjælper med</h1>
+          <h1 class="text-4xl font-bold leading-none sm:text-6xl">Forståelse Af</h1>
+            <h1 class="text-4xl font-bold leading-none sm:text-6xl"> Klima Problemer</h1>
+
+
+      </div>
+        <p class="mt-6 mb-8 text-md sm:mb-12">En hurtig guide over udvalgte klima problemer, 
+          <br class="hidden md:inline lg:hidden"> med forklaringer og mulige løsninger.
+        </p>
+        <div class="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
+          <a rel="noopener noreferrer" href="#" class="px-8 py-3 text-lg font-semibold rounded dark:bg-violet-400 dark:text-gray-900">Suspendisse</a>
+          <a rel="noopener noreferrer" href="#" class="px-8 py-3 text-lg font-semibold rounded dark:bg-violet-400 dark:text-gray-900">Suspendisse</a>
+          <a rel="noopener noreferrer" href="#" class="px-8 py-3 text-lg font-semibold rounded dark:bg-violet-400 dark:text-gray-900">Suspendisse</a>
+        </div>
+      </div>
+      <div class="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
+        <img src="assets/svg/Business_SVG.svg" alt="" class="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
 
 <div class="container my-24 px-6 mx-auto">
 
-  <section class="mb-32 text-gray-800">
+  <section class="text-gray-800">
     <p class="udvalgt text-center">Vores udvalgte klima problemer</p>
     <h2 class="text-2xl font-bold mb-12 text-center">3 Af FN's Verdensmål</h2>
 
-    <div class="flex flex-wrap mb-12">
+    <div class="besektion flex flex-wrap ">
       <div class="grow-0 shrink-0 basis-auto w-full lg:w-6/12 lg:pr-6 mb-6 lg:mb-0">
         <div class="relative overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg"
           style="background-position: 50%" data-mdb-ripple="true" data-mdb-ripple-color="light">
@@ -160,7 +215,7 @@
       </div>
     </div>
 
-    <div class="flex flex-wrap lg:flex-row-reverse lg:mt-20 mb-20">
+    <div class="lvpsektion flex flex-wrap lg:flex-row-reverse">
       <div class="grow-0 shrink-0 basis-auto w-full lg:w-6/12 lg:pl-6 mb-6 lg:mb-0">
         <div class="relative overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg"
           style="background-position: 50%" data-mdb-ripple="true" data-mdb-ripple-color="light">
@@ -190,7 +245,7 @@
       </div>
     </div>
 
-    <div class="flex flex-wrap">
+    <div class="vossektion flex flex-wrap">
       <div class="grow-0 shrink-0 basis-auto w-full lg:w-6/12 lg:pr-6 mb-6 lg:mb-0">
         <div class="relative overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg"
           style="background-position: 50%" data-mdb-ripple="true" data-mdb-ripple-color="light">
@@ -217,10 +272,9 @@
       </div>
     </div>
   </section>
-  <!-- Section: Design Block -->
 
 </div>
-<!-- Container for demo purpose -->
+
 
   
 
