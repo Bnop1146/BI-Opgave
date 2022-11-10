@@ -35,6 +35,37 @@
   margin-top: -5px;
 }
 
+.beknap{
+  height: 55px;
+  width: 250px;
+  --border-radius: 200px;
+  text-transform: none;
+
+}
+
+.lvpknap{
+  height: 55px;
+  width: 250px;
+  --border-radius: 200px;
+  text-transform: none;
+}
+
+.vosknap{
+  height: 55px;
+  width: 230px;
+  --border-radius: 200px;
+  text-transform: none;
+}
+
+.beknaptekst{
+  margin: 10px!important;
+}
+
+.lvpknaptekst{
+  margin: 10px!important;
+}
+
+
 
 @media screen and (min-width: 768px) {
   .lvpsektion{
