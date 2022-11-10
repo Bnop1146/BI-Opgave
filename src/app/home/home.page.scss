@@ -65,6 +65,18 @@
   margin: 10px!important;
 }
 
+.bebillede{
+  height: 300px;
+  width: 300px;
+}
+.lvpbillede{
+  height: 300px;
+  width: 300px;
+}
+.vosbillede{
+  height: 300px;
+  width: 300px;
+}
 
 
 @media screen and (min-width: 768px) {
@@ -92,6 +104,19 @@
   }
   .vosline{
     width: 38%;
+  }
+
+  .bebillede{
+    height: 350px;
+    width: 350px;
+  }
+  .lvpbillede{
+    height: 350px;
+    width: 350px;
+  }
+  .vosbillede{
+    height: 350px;
+    width: 350px;
   }
 
 }
@@ -123,7 +148,18 @@
   .vosline{
     width: 42%;
   }
-
+  .bebillede{
+    height: 500px;
+    width: 500px;
+  }
+  .lvpbillede{
+    height: 500px;
+    width: 500px;
+  }
+  .vosbillede{
+    height: 500px;
+    width: 500px;
+  }
 
 
 }
