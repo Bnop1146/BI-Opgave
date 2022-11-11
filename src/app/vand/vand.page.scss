@@ -2,6 +2,11 @@
     width: 60px;
     margin-top: 30px;
     margin-bottom: 30px;
+    margin-left: 15px;
+  }
+
+  #herosection-vand{
+    margin-top: 120px;
   }
 
 @media screen and (min-width: 768px) {
@@ -17,6 +22,9 @@
       margin-top: 20px;
       margin-bottom: 20px;
       margin-left: 20px;
+      }
+      #herosection-vand{
+        margin-top: 100px;
       }
 }
 @media screen and (max-width: 769px) {
@@ -54,6 +62,11 @@
   }
 
   @media screen and (min-width: 1024px){
+    .headersek{
+        margin-left: 100px;
+        align-items: center;
+      }
+    
 
     .links{
         margin-left: 40px;
@@ -65,4 +78,6 @@
       .logoimg{
         width: 65px;
       }
+
+
   }
