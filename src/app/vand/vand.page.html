@@ -3,9 +3,7 @@
 
   <ion-menu contentId="main-content">
    <ion-header>
-      <ion-toolbar>
-        <ion-title>Menu Content</ion-title>
-      </ion-toolbar>
+     
     </ion-header>
     <ion-content class="ion-padding">
       <ion-list>
@@ -38,7 +36,8 @@
   </div>
   <ion-header id="navbar" >
     <ion-list style="width: 50vw;" class="flex flex-row justify-between">
-      <a href=""><img style="width: 50px;" src="assets/images/FN_logosvg.svg" alt=""></a>
+      <a><img style="width: 50px;" src="assets/images/FN_logosvg.svg" alt=""></a>
+      <li [routerLink]="['/home']">Forside</li>
       <li [routerLink]="['/energi']">Bæredygtig Energi</li>
       <li [routerLink]="['/land']">Livet på land</li>
       <li [routerLink]="['/vand']">Vand og Sanitet</li>
