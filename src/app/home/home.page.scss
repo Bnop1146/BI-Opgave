@@ -3,6 +3,21 @@
   padding: 5px;
 }
 
+.footersektion{
+  margin: 30px;
+}
+
+.footerline{
+    border-top: 1px solid #d3d3d3;
+    padding: 15px 0;
+    margin-top: 40px;
+}
+
+.footertekst{
+  font-size: 13px;
+  text-align: -webkit-center;
+}
+
 .vossektion{
   margin-top: 50px;
   padding: 5px;
@@ -188,6 +203,10 @@
 
   }
 
+  .footertekst{
+    font-size: 15px;
+  }
+
 }
 
 
@@ -255,7 +274,4 @@
     margin-left: -220px;
     margin-top: -160px;
   }
-
-
-
 }
