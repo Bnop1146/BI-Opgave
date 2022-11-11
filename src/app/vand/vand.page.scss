@@ -1,3 +1,22 @@
+@media screen and (min-width: 768px) {
+    #main-content {
+        display: none;
+        display: hide;
+    }
+    #navbar {
+        display:block;
+    }
+}
+@media screen and (max-width: 769px) {
+    #main-content {
+        display: block;
+
+    }
+    #navbar {
+        display: none;
+    }
+}
+
 #herosection-vand {
     height: 50vh;
 }
@@ -6,3 +25,18 @@
     background-color: #26BDE2;
     width: 50%;
 }
+
+.footersektion{
+    margin: 30px;
+  }
+  
+  .footerline{
+      border-top: 1px solid #d3d3d3;
+      padding: 15px 0;
+      margin-top: 40px;
+  }
+  
+  .footertekst{
+    font-size: 13px;
+    text-align: -webkit-center;
+  }
