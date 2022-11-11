@@ -1,14 +1,54 @@
 
-<ion-header class="ion-no-border">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>Energi</ion-title>
-  </ion-toolbar>
-</ion-header>
+
 
 <ion-content class="ion-padding">
+
+  <ion-menu contentId="main-content">
+    <ion-header>
+       <ion-toolbar>   
+         <a><img [routerLink]="'/home'"  class="logoimg1"  src="assets/images/FN_logosvg.svg" alt=""></a>
+ 
+       </ion-toolbar>
+     </ion-header>
+     <ion-content class="ion-padding">
+       <ion-list>
+         <ion-item [routerLink]="['/energi']">
+           <ion-label>Bæredygtig Energi</ion-label>
+         </ion-item>
+       </ion-list>
+       <ion-list>
+         <ion-item [routerLink]="['/land']">
+           <ion-label>Livet på Land</ion-label>
+         </ion-item>
+       </ion-list>
+       <ion-list>
+         <ion-item [routerLink]="['/vand']">
+           <ion-label>Vand og Sanitet</ion-label>
+         </ion-item>
+       </ion-list>
+     </ion-content>
+   </ion-menu>
+   <div class="ion-page" id="main-content">
+     <ion-header>
+       <ion-toolbar>
+         <ion-buttons slot="start">
+           <ion-menu-button autoHide="true"></ion-menu-button>
+           <a><img [routerLink]="'/home'"  class="logoimg1"  src="assets/images/FN_logosvg.svg" alt=""></a>
+         </ion-buttons>
+       </ion-toolbar>
+     </ion-header>
+   
+   </div>
+   <ion-header id="navbar" class="headersektion">
+     <ion-list class="headersek ion-margin-bottom flex flex-row">
+       <a><img [routerLink]="'/home'"  class="logoimg"  src="assets/images/FN_logosvg.svg" alt=""></a>
+       <li [routerLink]="['/energi']"class="links">Bæredygtig Energi</li>
+       <li [routerLink]="['/land']" class="links">Livet på land</li>
+       <li [routerLink]="['/vand']" class="links">Vand og Sanitet</li>
+     </ion-list>
+ 
+   </ion-header>
+ 
 
   <section class="mb-8">
     <ion-card
@@ -16,7 +56,6 @@
       id="herosection-energi"
     >
       <div class="text-center">
-        <!-- ⬅️ THIS DIV WILL BE CENTERED -->
         <ion-img
           src="assets/images/Energi_icon_bg.svg"
           class="Hero_icon"
