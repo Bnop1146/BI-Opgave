@@ -1,4 +1,3 @@
-/* iOS places the subtitle above the title */
 ion-card-header.ios {
     justify-items: center;
     display: flex;
@@ -33,9 +32,66 @@ ion-card-header.ios {
     text-align: -webkit-center;
   }
 
+  .logoimg1{
+    width: 60px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  #herosection-energi{
+    margin-top: 120px;
+
+  }
+
 
   @media screen and (min-width: 768px) {                                                                                                                  
     .footertekst{
       font-size: 15px;
+    }
+
+    #herosection-energi{
+      margin-top: 100px;
+
+    }
+    #main-content {
+      display: none;
+      display: hide;
+  }
+  #navbar {
+      display:block;
+  }
+  .logoimg1{
+    width: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    }
+  }
+
+  @media screen and (max-width: 769px) {
+    #main-content {
+        display: block;
+  
+    }
+    #navbar {
+        display: none;
+    }
+  }
+
+  @media screen and (min-width: 1024px){
+    .headersek{
+      margin-left: 100px;
+      align-items: center;
+    }
+  
+    .links{
+      margin-left: 40px;
+      font-size: 15px;
+      margin-bottom: 35px;
+      margin-top: 35px;
+    }
+  
+    .logoimg{
+      width: 65px;
     }
   }

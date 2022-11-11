@@ -1,49 +1,9 @@
 
 <ion-content class="ion-padding">
 
-  <ion-menu contentId="main-content">
-   <ion-header>
-     
-    </ion-header>
-    <ion-content class="ion-padding">
-      <ion-list>
-        <ion-item [routerLink]="['/energi']">
-          <ion-label>Bæredygtig Energi</ion-label>
-        </ion-item>
-      </ion-list>
-      <ion-list>
-        <ion-item [routerLink]="['/land']">
-          <ion-label>Livet på Land</ion-label>
-        </ion-item>
-      </ion-list>
-      <ion-list>
-        <ion-item [routerLink]="['/vand']">
-          <ion-label>Vand og Sanitet</ion-label>
-        </ion-item>
-      </ion-list>
-    </ion-content>
-  </ion-menu>
-  <div class="ion-page" id="main-content">
-    <ion-header>
-      <ion-toolbar>
-        <ion-buttons slot="start">
-          <ion-menu-button autoHide="true"></ion-menu-button>
-        </ion-buttons>
-        <ion-title>Menu</ion-title>
-      </ion-toolbar>
-    </ion-header>
   
-  </div>
-  <ion-header id="navbar" >
-    <ion-list style="width: 50vw;" class="flex flex-row justify-between">
-      <a><img style="width: 50px;" src="assets/images/FN_logosvg.svg" alt=""></a>
-      <li [routerLink]="['/home']">Forside</li>
-      <li [routerLink]="['/energi']">Bæredygtig Energi</li>
-      <li [routerLink]="['/land']">Livet på land</li>
-      <li [routerLink]="['/vand']">Vand og Sanitet</li>
-    </ion-list>
 
-  </ion-header>
+
   <ion-card class="container m-auto bg-[url('src/assets/images/vogs-hero.png')] bg-cover bg-center flex justify-center items-center h-screen mt-20" id="herosection-vand">
     <div class="flex flex-col items-center">
     <ion-img style="width:7vh;" class="mb-4" alt="Rent vand og sanitet logo" src="assets/images/vogs-icon.svg" ></ion-img>

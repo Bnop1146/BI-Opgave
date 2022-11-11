@@ -1,3 +1,9 @@
+.logoimg1{
+    width: 60px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
 @media screen and (min-width: 768px) {
     #main-content {
         display: none;
@@ -6,6 +12,12 @@
     #navbar {
         display:block;
     }
+    .logoimg1{
+      width: 60px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: 20px;
+      }
 }
 @media screen and (max-width: 769px) {
     #main-content {
@@ -39,4 +51,18 @@
   .footertekst{
     font-size: 13px;
     text-align: -webkit-center;
+  }
+
+  @media screen and (min-width: 1024px){
+
+    .links{
+        margin-left: 40px;
+        font-size: 15px;
+        margin-bottom: 35px;
+        margin-top: 35px;
+      }
+    
+      .logoimg{
+        width: 65px;
+      }
   }
