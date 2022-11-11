@@ -5,11 +5,15 @@
   <ion-menu contentId="main-content">
     <ion-header>
       <ion-toolbar>
-        <ion-title>Menu Content</ion-title>
+        <ion-title>FN</ion-title>
       </ion-toolbar>
     </ion-header>
-    <ion-content class="ion-padding">
-
+    <ion-content class="ion-padding" [fullscreen]="true">
+      <ion-buttons routerLink="/energi" (click)="goToEnergi" class="m-4">Bæredygtig Energi</ion-buttons>
+      <hr>
+      <ion-buttons routerLink="/land" (click)="goToLand" class="m-4">Livet På Land</ion-buttons>
+      <hr>
+      <ion-buttons routerLink="/energi" (click)="goToEnergi" class="m-4">Vand Og Sansitet</ion-buttons>
 
 
 
