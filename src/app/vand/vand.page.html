@@ -39,10 +39,10 @@
    </div>
    <ion-header id="navbar" class="headersektion">
      <ion-list class="headersek ion-margin-bottom flex flex-row">
-       <a><img [routerLink]="'/home'"  class="logoimg"  src="assets/images/FN_logosvg.svg" alt=""></a>
-       <li [routerLink]="['/energi']"class="links">Bæredygtig Energi</li>
-       <li [routerLink]="['/land']" class="links">Livet på land</li>
-       <li [routerLink]="['/vand']" class="links">Vand og Sanitet</li>
+       <a><img [routerLink]="'/home'"  class="logoimg cursor-pointer"  src="assets/images/FN_logosvg.svg" alt=""></a>
+       <li [routerLink]="['/energi']"class="links hover:underline decoration-yellow-500 cursor-pointer">Bæredygtig Energi</li>
+       <li [routerLink]="['/land']" class="links hover:underline decoration-green-500 c">Livet på land</li>
+       <li [routerLink]="['/vand']" class="links underline decoration-sky-500 cursor-pointer">Vand og Sanitet</li>
      </ion-list>
  
    </ion-header>
