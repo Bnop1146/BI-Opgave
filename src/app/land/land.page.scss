@@ -1,0 +1,41 @@
+/* iOS places the subtitle above the title */
+ion-card-header.ios {
+    justify-items: center;
+    display: flex;
+    flex-flow: column-reverse;
+  }
+
+
+  .Hero_icon{
+    width: 25%;
+    margin: auto;
+   
+  }
+
+
+  .text-5x1{
+    font-size: 40px;
+  }
+
+
+  .footersektion{
+    margin: 30px;
+  }
+  
+  .footerline{
+      border-top: 1px solid #d3d3d3;
+      padding: 15px 0;
+      margin-top: 40px;
+  }
+
+  .footertekst{
+    font-size: 13px;
+    text-align: -webkit-center;
+  }
+
+
+  @media screen and (min-width: 768px) {                                                                                                                  
+    .footertekst{
+      font-size: 15px;
+    }
+  }
