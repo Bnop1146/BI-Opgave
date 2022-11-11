@@ -2,40 +2,57 @@
 
 <ion-content class="ion-padding">
  
-  <ion-menu contentId="main-content">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>FN</ion-title>
+ <ion-menu contentId="main-content">
+   <ion-header>
+      <ion-toolbar>   
+        <a><img [routerLink]="'/home'"  class="logoimg1"  src="assets/images/FN_logosvg.svg" alt=""></a>
+
       </ion-toolbar>
     </ion-header>
-    <ion-content class="ion-padding" [fullscreen]="true">
-      <ion-buttons routerLink="/energi" (click)="goToEnergi" class="m-4">Bæredygtig Energi</ion-buttons>
-      <hr>
-      <ion-buttons routerLink="/land" (click)="goToLand" class="m-4">Livet På Land</ion-buttons>
-      <hr>
-      <ion-buttons routerLink="/energi" (click)="goToEnergi" class="m-4">Vand Og Sansitet</ion-buttons>
-
-
-
-    
+    <ion-content class="ion-padding">
+      <ion-list>
+        <ion-item [routerLink]="['/energi']">
+          <ion-label>Bæredygtig Energi</ion-label>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        <ion-item [routerLink]="['/land']">
+          <ion-label>Livet på Land</ion-label>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        <ion-item [routerLink]="['/vand']">
+          <ion-label>Vand og Sanitet</ion-label>
+        </ion-item>
+      </ion-list>
     </ion-content>
   </ion-menu>
   <div class="ion-page" id="main-content">
     <ion-header>
       <ion-toolbar>
         <ion-buttons slot="start">
-          <ion-menu-button></ion-menu-button>
+          <ion-menu-button autoHide="true"></ion-menu-button>
+          <a><img [routerLink]="'/home'"  class="logoimg1"  src="assets/images/FN_logosvg.svg" alt=""></a>
         </ion-buttons>
-        <ion-title>Menu</ion-title>
       </ion-toolbar>
     </ion-header>
   
   </div>
+  <ion-header id="navbar" class="headersektion">
+    <ion-list class="headersek ion-margin-bottom flex flex-row">
+      <a><img [routerLink]="'/home'"  class="logoimg"  src="assets/images/FN_logosvg.svg" alt=""></a>
+      <li [routerLink]="['/energi']"class="links">Bæredygtig Energi</li>
+      <li [routerLink]="['/land']" class="links">Livet på land</li>
+      <li [routerLink]="['/vand']" class="links">Vand og Sanitet</li>
+    </ion-list>
 
- 
+  </ion-header>
+
+
   <div class="consek">
     <div class="hero3">
       <ion-img  src="assets/images/Hero.svg" alt="" class="hero1billede"></ion-img>
+
     </div>
     <div class="container m-auto px-5">
      
