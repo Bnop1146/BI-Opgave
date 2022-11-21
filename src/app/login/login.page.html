@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-grid class="md:p-28 bg-white">
+    <ion-row class="flex ">
+      <ion-col class=" justify-center border">
+        <div class="text-center mt-6">
+          <h4>Login Form</h4>
+        </div>
+        <form  action="/auth" method="post" >
+        <div class="p-3 md:p-12">
+          <ion-item>
+            <ion-label for="username" position="floating">Username</ion-label>
+            <ion-input type="text" name="username" placeholder="Username" id="username" required></ion-input>
+          </ion-item>
+  
+          <ion-item>
+            <ion-label for="password" position="floating">Password</ion-label>
+            <ion-input type="password" name="password" placeholder="Password" id="password" required></ion-input>
+          </ion-item>
+        </div>
+  
+        <div class="p-2 flex justify-center mb-4">
+          <ion-button type="submit" value="Login" color="danger" expand="block">Login</ion-button>
+        </div>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+ 
+
+</ion-content>
+
+
