@@ -30,8 +30,15 @@
     "@capacitor/status-bar": "4.0.1",
     "@compodoc/compodoc": "^1.1.19",
     "@ionic/angular": "^6.1.9",
+<<<<<<< HEAD
+    "body-parser": "^1.20.1",
     "express": "^4.18.2",
+    "express-session": "^1.17.3",
+=======
+    "express": "^4.18.2",
+>>>>>>> 360330e134db400c01e76ec71aff2e5a12c10bd5
     "ionicons": "^6.0.3",
+    "mysql": "^2.18.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
     "zone.js": "~0.11.4"
@@ -71,6 +78,7 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
     "ngx-tailwind": "^4.0.0",
+    "nodemon": "^2.0.20",
     "postcss": "^8.4.14",
     "protractor": "~7.0.0",
     "tailwindcss": "^3.1.6",
