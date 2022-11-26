@@ -26,7 +26,7 @@ app.use(express.static(path.join(__dirname, 'static')));
 // http://localhost:3000/
 app.get('/', function(request, response) {
 	// Render login template
-	response.sendFile(path.join(__dirname + '/home'));
+	response.sendFile(path.join(__dirname + '/login.page.html'));
 });
 
 // http://localhost:3000/auth
@@ -63,7 +63,7 @@ app.get('/home.page.html', function(request, response) {
 	// If the user is loggedin
 	if (request.session.loggedin) {
 		// Output username
-		response.redirect('/frontend/src/app/home/home.page.html');
+		response.redirect('/home.page.html');
 	} else {
 		// Not logged in
 		response.send('Please login to view this page!');
@@ -71,4 +71,6 @@ app.get('/home.page.html', function(request, response) {
 	response.end();
 });
 
-app.listen(8100);
+app.use("frontend/src/app/home",()=>{
+    console.log('server running..');
+});
