@@ -1,0 +1,23 @@
+<table class="table-auto">
+    <thead>
+      <tr>
+        <th>Navn</th>
+        <th>Efternavn</th>
+        <th>Email</th>
+        <th>Tlf</th>
+        <th>Rediger</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let us of readData">
+        <td>{{us.fornavn}}</td>
+        <td>{{us.efternavn}}</td>
+        <td>{{us.email}}</td>
+        <td>{{us.tlf}}</td>
+        <td>
+            <ion-button (click)="sletID(us.id)">Slet</ion-button>
+            <a [routerLink]="['/modtagere',us.id]" routerLinkActive="router-link-active" >Opdater</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>

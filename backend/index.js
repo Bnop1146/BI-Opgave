@@ -10,13 +10,14 @@ app.use(bodyparser.json());
 
 
 
+
 //Database Connection
  
 const db = mysql.createConnection({
     host:'localhost',
     user: 'root',
     password:'root',
-    database:'simpledb',
+    database:'bi-db',
     port:'8889'
 });
 
@@ -29,14 +30,16 @@ db.connect(err=>{
 
 //Get All Data
 
-app.get('/user', (req,res)=>{
+app.get('/nyhedsbrev', (req,res)=>{
+
+    console.log('get all user');
      
-    let qr = `select * from user`
+    let qr = `select * from nyhedsbrev`;
 
     db.query(qr,(err,result)=>{
         if (err)
         {
-            console.log(err,'errs')
+            console.log(err,'errs');
         }
 
         if(result.length>0)
@@ -55,7 +58,7 @@ app.get('/user', (req,res)=>{
 
 
 //Get Single Data
-app.get('/user/:id', (req,res)=>{
+app.get('/bruger/:id', (req,res)=>{
 
     let gID = req.params.id;
 
@@ -92,18 +95,19 @@ app.get('/user/:id', (req,res)=>{
 
 //Create Data
 
-app.post('/user',(req,res)=>{
+app.post('/nyhedsbrev',(req,res)=>{
 
     console.log(req.body,'createdata');
 
-    let fullName = req.body.fullname;
+    let forNavn = req.body.fornavn;
+    let efterNavn = req.body.efternavn;
     let eMail = req.body.email;
-    let mb = req.body.mobile;
+    let tlf = req.body.tlf;
 
-    let qr = `insert into user(fullname, email, mobile) 
-                values('${fullName}', '${eMail}', '${mb}')`;
+    let qr = `insert into nyhedsbrev(fornavn,efternavn,email,tlf) 
+                values('${forNavn}','${efterNavn}','${eMail}','${tlf}')`;
 
-
+console.log(qr, 'qr')
 
     db.query(qr,(err,result)=>{
 
@@ -115,7 +119,6 @@ app.post('/user',(req,res)=>{
 
 
     });
-
 });
 
 
@@ -129,11 +132,12 @@ app.put('/user/:id', (req,res)=>{
     console.log(req.body,'updatedata');
 
     let gID = req.params.id;
-    let fullName = req.body.fullname;
+    let forNavn = req.body.fornavn;
+    let efterNavn = req.body.efternavn;
     let eMail = req.body.email;
-    let mb = req.body.mobile;
+    let tlf = req.body.tlf;
 
-    let qr = `update user set fullname = '${fullName}', email = '${eMail}', mobile = '${mb}'
+    let qr = `update user set fornavn = '${forNavn}',efternavn = '${efterNavn}', email = '${eMail}', tlf = '${tlf}'
             where id = ${gID}`;
 
 
@@ -155,11 +159,11 @@ app.put('/user/:id', (req,res)=>{
 
 //Delete Single Data
 
-app.delete('/user/:id', (req,res)=>{
+app.delete('/nyhedsbrev/:id', (req,res)=>{
 
     let qID = req.params.id;
 
-    let qr = `delete from user where id = '${qID}'  `;
+    let qr = `delete from nyhedsbrev where id = '${qID}'  `;
     db.query(qr,(err,result)=>{
         if(err) {console.log(err);}
 
