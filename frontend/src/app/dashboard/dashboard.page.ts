@@ -1,0 +1,19 @@
+import { Component, OnInit } from '@angular/core';
+import {ApiserviceService} from '../apiservice.service';
+import {ActivatedRoute} from '@angular/router';
+
+
+@Component({
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.page.html',
+  styleUrls: ['./dashboard.page.scss']
+})
+export class DashboardPage implements OnInit {
+
+  constructor(private service:ApiserviceService, private router:ActivatedRoute) { }
+
+  ngOnInit(): void {
+    console.log(this.router.snapshot.paramMap.get('id'),'getid')
+  }
+
+}
