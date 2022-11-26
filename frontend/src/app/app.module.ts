@@ -9,6 +9,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AuthModule } from '@auth0/auth0-angular';
 
+
+
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, AuthModule.forRoot({
