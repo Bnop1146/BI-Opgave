@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { CreateComponent } from './create/create.component';
 import { ReadComponent } from './read/read.component';
-
 const routes: Routes = [
   {path: 'home',loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -14,6 +13,11 @@ const routes: Routes = [
   
   {path:'create', component:CreateComponent},
   {path:'read', component: ReadComponent},
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
+  },
+
   
 
 ];
