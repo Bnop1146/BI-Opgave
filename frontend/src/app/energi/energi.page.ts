@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '@auth0/auth0-angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-energi',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EnergiPage implements OnInit {
 
-  constructor() { }
+  constructor(public auth: AuthService, private router:Router) { }
 
   ngOnInit() {
+  }
+
+  logout(){
+    this.auth.logout();
+    console.log()
   }
 
 }

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import {NavController} from '@ionic/angular';
+import { AuthService } from '@auth0/auth0-angular';
+import { Router } from '@angular/router';
 import {ApiserviceService} from '../apiservice.service';
 
 
@@ -11,7 +13,15 @@ import {ApiserviceService} from '../apiservice.service';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, private service:ApiserviceService) {}
+  constructor(public navCtrl: NavController, public auth: AuthService, private router:Router , private service:ApiserviceService) {}
+
+  ngOnInit(): void {
+    this.auth.isAuthenticated$.subscribe(isAuthenticated => {
+      if(isAuthenticated) {
+        this.router.navigate(['/energi']);
+      }
+    });
+  }
 
 
 
@@ -29,6 +39,11 @@ export class HomePage {
   
   goToLand() {
     this.navCtrl.navigateForward('Land');
+  }
+
+  login(){
+    this.auth.loginWithRedirect();
+    console.log()
   }
   
 

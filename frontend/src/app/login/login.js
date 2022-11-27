@@ -3,21 +3,13 @@ const express = require('express');
 const session = require('express-session');
 const path = require('path');
 
-const Sequelize = require("sequelize");
-const sequelize = new Sequelize('nodelogin', 'root', '', {
-  host: "localhost",
-  dialect: "mysql",
-  port: 3308
+const connection = mysql.createConnection({
+	host     : 'localhost',
+	user     : 'root',
+	password : '',
+	database : 'nodelogin',
+    port     : '3308'
 });
-
-const db = {};
-
-db.Sequelize = Sequelize;
-db.sequelize = sequelize;
-
-db.loggedin = require("./login.js")(sequelize, Sequelize);
-
-module.exports = db;
 
 const app = express();
 
@@ -34,7 +26,7 @@ app.use(express.static(path.join(__dirname, 'static')));
 // http://localhost:3000/
 app.get('/', function(request, response) {
 	// Render login template
-	response.sendFile(path.join(__dirname + '/login.html'));
+	response.sendFile(path.join(__dirname + '/login.page.html'));
 });
 
 // http://localhost:3000/auth
@@ -54,7 +46,7 @@ app.post('/auth', function(request, response) {
 				request.session.loggedin = true;
 				request.session.username = username;
 				// Redirect to home page
-				response.redirect('/energi');
+				response.redirect('/home');
 			} else {
 				response.send('Incorrect Username and/or Password!');
 			}			
@@ -67,11 +59,11 @@ app.post('/auth', function(request, response) {
 });
 
 // http://localhost:3000/home
-app.get('/energi', function(request, response) {
+app.get('/home.page.html', function(request, response) {
 	// If the user is loggedin
 	if (request.session.loggedin) {
 		// Output username
-		response.send('Welcome back, ' + request.session.username + '!');
+		response.redirect('/home.page.html');
 	} else {
 		// Not logged in
 		response.send('Please login to view this page!');
@@ -79,4 +71,6 @@ app.get('/energi', function(request, response) {
 	response.end();
 });
 
-app.listen(8100);
+app.use("frontend/src/app/home",()=>{
+    console.log('server running..');
+});
