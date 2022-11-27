@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ApiserviceService} from '../apiservice.service';
+import { AuthService } from '@auth0/auth0-angular';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,10 +11,14 @@ import {ApiserviceService} from '../apiservice.service';
 })
 export class DashboardPage implements OnInit {
 
-  constructor(private service:ApiserviceService) { }
+  constructor(private service:ApiserviceService, public auth: AuthService, private router:Router) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+  }
 
+  logout(){
+    this.auth.logout();
+    console.log()
   }
 
 }
