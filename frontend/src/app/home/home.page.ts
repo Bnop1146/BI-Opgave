@@ -18,7 +18,7 @@ export class HomePage {
   ngOnInit(): void {
     this.auth.isAuthenticated$.subscribe(isAuthenticated => {
       if(isAuthenticated) {
-        this.router.navigate(['/energi']);
+        this.router.navigate(['/dashboard']);
       }
     });
   }
@@ -31,6 +31,10 @@ export class HomePage {
 
   goToEnergi() {
     this.navCtrl.navigateForward('Energi');
+  }
+
+  goToDashboard() {
+    this.navCtrl.navigateForward('Dashboard');
   }
 
   goToVand() {
