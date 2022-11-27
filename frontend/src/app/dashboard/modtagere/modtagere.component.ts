@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {ApiserviceService} from '../../apiservice.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '@auth0/auth0-angular';
+import { Router } from '@angular/router';
 
 
 
@@ -13,7 +15,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class ModtagereComponent implements OnInit {
 
-  constructor(private service:ApiserviceService) { }
+  constructor(private service:ApiserviceService, public auth: AuthService, private router:Router) { }
 
   readData:any;
   getparamid:any;
@@ -27,6 +29,10 @@ export class ModtagereComponent implements OnInit {
     });
 
     this.successmsg = 'Bruger opdateret';
+  }
+  logout(){
+    this.auth.logout();
+    console.log()
   }
 
   opdaterForm = new FormGroup({

@@ -22,6 +22,7 @@
       </tr>
     </tbody>
   </table>
+  <ion-button (click)="logout()" class="links hover:underline decoration-sky-500 cursor-pointer absolute top-2 right-2">Logout<ion-icon name="log-out-outline"></ion-icon></ion-button>
 <div class="w-1/3 dark:bg-gray-700 flex flex-col justify-center items-center">
   <form [formGroup]="opdaterForm" *ngFor="let hm of getparamid" class="w-3/4 dark:bg-gray-700" action=""> 
     <h2 class="dark:text-white text-lg">Opdater</h2>
