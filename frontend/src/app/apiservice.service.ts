@@ -10,6 +10,7 @@ export class ApiserviceService {
   constructor(private _http:HttpClient) { }
 
   apiUrl = 'http://localhost:3000/nyhedsbrev';
+  guiUrl = 'http://localhost:3000/paragraph';
 
   opretNyhedsbrev(data:any):Observable<any>
   {
@@ -33,5 +34,16 @@ export class ApiserviceService {
     let ids = id;
     return this._http.put(`${this.apiUrl}/${ids}`, data);
   }
+  getSingleData(id:any):Observable<any>
+{
+  let ids = id;
+  return this._http.get(`${this.apiUrl}/${ids}`);
+}
+
+guiElement(id:any):Observable<any>
+{
+  let ids = id;
+  return this._http.get(`${this.guiUrl}/${ids}`);
+}
   
 }

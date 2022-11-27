@@ -1,23 +1,48 @@
-<table class="table-auto">
-    <thead>
+<div class="lg:flex flex-row w-auto dark:bg-gray-700">
+<table class="table-auto w-2/3  lg:h-screen text-sm text-left text-gray-500 dark:text-gray-400" >
+    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
       <tr>
-        <th>Navn</th>
-        <th>Efternavn</th>
-        <th>Email</th>
-        <th>Tlf</th>
-        <th>Rediger</th>
+        <th scope="col" class="py-3 px-6">Navn</th>
+        <th scope="col" class="py-3 px-6">Efternavn</th>
+        <th scope="col" class="py-3 px-6">Email</th>
+        <th scope="col" class="py-3 px-6">Tlf</th>
+        <th scope="col" class="py-3 px-6">Rediger</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let us of readData">
-        <td>{{us.fornavn}}</td>
-        <td>{{us.efternavn}}</td>
-        <td>{{us.email}}</td>
-        <td>{{us.tlf}}</td>
-        <td>
-            <ion-button (click)="sletID(us.id)">Slet</ion-button>
-            <a [routerLink]="['/modtagere',us.id]" routerLinkActive="router-link-active" >Opdater</a>
+      <tr *ngFor="let us of readData" class="border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+        <td scope="row" class="py-1 px-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">{{us.fornavn}}</td>
+        <td class="py-1 px-3">{{us.efternavn}}</td>
+        <td class="py-1 px-3">{{us.email}}</td>
+        <td class="py-1 px-3">{{us.tlf}}</td>
+        <td class="py-1 px-3">
+            <ion-button (click)="sletID(us.id)">Slet<ion-icon name="close-outline"></ion-icon></ion-button>
+            <ion-button (click)="opdaterID(us.id)">Opdater<ion-icon name="sync-outline"></ion-icon></ion-button>
         </td>
       </tr>
     </tbody>
   </table>
+<div class="w-1/3 dark:bg-gray-700 flex flex-col justify-center items-center">
+  <form [formGroup]="opdaterForm" *ngFor="let hm of getparamid" class="w-3/4 dark:bg-gray-700" action=""> 
+    <h2 class="dark:text-white text-lg">Opdater</h2>
+    <div class="dark:bg-gray-700">
+      <ion-label class="dark:bg-gray-700 block mb-2 text-sm font-medium text-gray-900 dark:text-white" position="stacked" >Fornavn</ion-label>
+      <input class="form-control" formControlName="fornavn" placeholder="Indtast fornavn" required>
+    </div>
+    <div lines="full">
+      <ion-label class="dark:bg-gray-700 block mb-2 text-sm font-medium text-gray-900 dark:text-white" position="stacked">Efternavn</ion-label>
+      <ion-input class="form-control" formControlName="efternavn" placeholder="Indtast efternavn" required></ion-input>
+    </div>
+    <div lines="full">
+      <ion-label class="dark:bg-gray-700 block mb-2 text-sm font-medium text-gray-900 dark:text-white" position="stacked">Email</ion-label>
+      <ion-input class="form-control" formControlName="email" placeholder="Indtast email" required></ion-input>
+    </div>
+    <div lines="full">
+      <ion-label class="dark:bg-gray-700 block mb-2 text-sm font-medium text-gray-900 dark:text-white" position="stacked">Tlf</ion-label>
+      <ion-input class="form-control" formControlName="tlf" placeholder="Indtast tlf"required></ion-input>
+    </div>
+    <ion-button type="submit" (click)="opdaterModtager(hm.id)">Opdater</ion-button>
+  </form>
+</div>
+
+</div>

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
@@ -16,6 +16,8 @@ import { ModtagereComponent } from './modtagere/modtagere.component';
     FormsModule,
     IonicModule,
     DashboardPageRoutingModule,
+    ReactiveFormsModule
+
   ],
   declarations: [DashboardPage, ModtagereComponent],
 })

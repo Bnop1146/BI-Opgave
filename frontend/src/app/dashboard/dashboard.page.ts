@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {ApiserviceService} from '../apiservice.service';
-import {ActivatedRoute} from '@angular/router';
 
 
 @Component({
@@ -10,10 +9,10 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class DashboardPage implements OnInit {
 
-  constructor(private service:ApiserviceService, private router:ActivatedRoute) { }
+  constructor(private service:ApiserviceService) { }
 
   ngOnInit(): void {
-    console.log(this.router.snapshot.paramMap.get('id'),'getid')
+
   }
 
 }

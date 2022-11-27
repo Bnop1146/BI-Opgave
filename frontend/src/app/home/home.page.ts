@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {NavController} from '@ionic/angular';
 import { AuthService } from '@auth0/auth0-angular';
 import { Router } from '@angular/router';
+import {ApiserviceService} from '../apiservice.service';
 
 
 
@@ -12,7 +13,7 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, public auth: AuthService, private router:Router ) {}
+  constructor(public navCtrl: NavController, public auth: AuthService, private router:Router , private service:ApiserviceService) {}
 
   ngOnInit(): void {
     this.auth.isAuthenticated$.subscribe(isAuthenticated => {
@@ -21,6 +22,8 @@ export class HomePage {
       }
     });
   }
+
+
 
   goToHome() {
     this.navCtrl.navigateForward('Home');

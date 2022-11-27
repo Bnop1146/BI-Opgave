@@ -10,7 +10,6 @@ app.use(bodyparser.json());
 
 
 
-
 //Database Connection
  
 const db = mysql.createConnection({
@@ -58,11 +57,11 @@ app.get('/nyhedsbrev', (req,res)=>{
 
 
 //Get Single Data
-app.get('/bruger/:id', (req,res)=>{
+app.get('/nyhedsbrev/:id', (req,res)=>{
 
     let gID = req.params.id;
 
-    let qr = `select * from user where id = ${gID}`;
+    let qr = `select * from nyhedsbrev where id = ${gID}`;
 
     db.query(qr,(err,result)=>{
 
@@ -84,6 +83,37 @@ app.get('/bruger/:id', (req,res)=>{
             });
         }
 
+
+    });
+
+
+});
+
+app.get('/paragraph/:id', (req,res)=>{
+
+    let gID = req.params.id;
+
+    let qr = `select * from paragraph where id = ${gID}`;
+
+    db.query(qr,(err,result)=>{
+
+        if(err) {console.log(err);}
+
+        if(result.length>0)
+        {
+
+            res.send({
+                message:'get single data',
+                data:result
+            });
+
+        }
+        else
+        {
+            res.send({
+                message:'data not found'
+            });
+        }
 
 
     });
@@ -126,7 +156,7 @@ console.log(qr, 'qr')
 
 //Update Data
 
-app.put('/user/:id', (req,res)=>{
+app.put('/nyhedsbrev/:id', (req,res)=>{
 
 
     console.log(req.body,'updatedata');
@@ -137,8 +167,7 @@ app.put('/user/:id', (req,res)=>{
     let eMail = req.body.email;
     let tlf = req.body.tlf;
 
-    let qr = `update user set fornavn = '${forNavn}',efternavn = '${efterNavn}', email = '${eMail}', tlf = '${tlf}'
-            where id = ${gID}`;
+    let qr = `update nyhedsbrev set fornavn = '${forNavn}',efternavn = '${efterNavn}', email = '${eMail}', tlf = '${tlf}' where id = ${gID}`;
 
 
     db.query(qr,(err,result)=>{
