@@ -32,7 +32,7 @@ export class HomePage {
   goToEnergi() {
     this.navCtrl.navigateForward('Energi');
   }
-
+  
   goToDashboard() {
     this.navCtrl.navigateForward('Dashboard');
   }
