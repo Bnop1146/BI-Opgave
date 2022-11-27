@@ -1,6 +1,6 @@
 <div class="w-screen flex flex-col items-center">
 <h2>Tilmeld vores nyhedsbrev</h2>
-<div *ngIf="errormsg" class="container" id="alertbox">
+<div *ngIf="errormsg" class="container lg:w-1/3 w-2/3" id="alertbox">
   <div class="container bg-red-500 flex items-center text-white text-sm font-bold px-4 py-3 relative" role="alert">
     <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
       <path
@@ -19,23 +19,23 @@
   </div>
 </div>
 
-<form [formGroup]="nyhedsbrevForm" (ngSubmit)="nyhedsbrevSubmit()" class="lg:w-1/3 w-2/3" action="">
-  <ion-item lines="full">
-    <ion-label position="floating">Fornavn</ion-label>
+<form [formGroup]="nyhedsbrevForm" (ngSubmit)="nyhedsbrevSubmit()" class="lg:w-1/3 w-2/3 bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" action="">
+  <div lines="full">
+    <ion-label class=" text-gray-700 text-sm font-bold mb-2" position="floating">Fornavn</ion-label>
     <ion-input class="form-control" formControlName="fornavn" required></ion-input>
-  </ion-item>
-  <ion-item lines="full">
-    <ion-label position="floating">Efternavn</ion-label>
+  </div>
+  <div lines="full">
+    <ion-label class=" text-gray-700 text-sm font-bold mb-2" position="floating">Efternavn</ion-label>
     <ion-input class="form-control" formControlName="efternavn" required></ion-input>
-  </ion-item>
-  <ion-item lines="full">
-    <ion-label position="floating">Email</ion-label>
+  </div>
+  <div lines="full">
+    <ion-label class=" text-gray-700 text-sm font-bold mb-2" position="floating">Email</ion-label>
     <ion-input class="form-control" formControlName="email" required></ion-input>
-  </ion-item>
-  <ion-item lines="full">
-    <ion-label position="floating">Tlf</ion-label>
+</div>
+  <div lines="full">
+    <ion-label class=" text-gray-700 text-sm font-bold mb-2" position="floating">Tlf</ion-label>
     <ion-input class="form-control" formControlName="tlf" required></ion-input>
-  </ion-item>
+  </div>
   <ion-button type="submit" >Tilmeld</ion-button>
 </form>
 </div>
